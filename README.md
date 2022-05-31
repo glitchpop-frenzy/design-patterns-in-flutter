@@ -1,10 +1,11 @@
-# design_patterns_in_flutter
+# Design Patterns in Flutter
 
 A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Design Patters:
+- Singletons: maintaining a single instance for the whole lifecycle of an application and provide a global point to access it.
 
 A few resources to get you started if this is your first Flutter project:
 
