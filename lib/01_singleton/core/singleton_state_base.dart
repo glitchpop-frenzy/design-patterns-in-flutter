@@ -4,10 +4,10 @@ abstract class SingletonStateBase {
   // protected methods and objects
   // accessible to only those who extends this class
   @protected
-  String? initialText;
+  String initialText = "";
   @protected
   String? stateText;
-  String? get currentTest => initialText;
+  String get currentText => stateText!;
 
   void setStateText(String text) {
     stateText = text;
