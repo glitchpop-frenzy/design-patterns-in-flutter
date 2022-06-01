@@ -11,8 +11,8 @@ class SingletonCallByDefinition extends SingletonStateBase {
     print(stateText);
   }
 
-  static SingletonCallByDefinition? getState() {
+  static SingletonCallByDefinition getState() {
     _instance ??= SingletonCallByDefinition._internal();
-    return _instance;
+    return _instance!;
   }
 }
