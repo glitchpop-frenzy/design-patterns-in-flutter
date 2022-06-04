@@ -24,6 +24,10 @@ class PlatformButton extends StatelessWidget {
       padding: const EdgeInsets.all(4),
       child: kIsWeb || Platform.isAndroid
           ? MaterialButton(
+              height: 58,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
               color: materialColor,
               textColor: materialTextColor,
               disabledColor: Colors.grey,
@@ -35,10 +39,16 @@ class PlatformButton extends StatelessWidget {
               ),
             )
           : CupertinoButton(
-              color: Colors.black,
+              minSize: 58,
+              borderRadius: BorderRadius.circular(8),
+              color: materialColor,
+              disabledColor: Colors.grey,
               child: Text(
                 text,
                 textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: materialTextColor,
+                ),
               ),
               onPressed: onPressed),
     );

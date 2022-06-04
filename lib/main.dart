@@ -1,25 +1,21 @@
+import 'package:design_patterns_in_flutter/routes/router.dart';
 import 'package:flutter/material.dart';
 
-import '01_singleton/singletone_example.dart';
-
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  final _appRouter = AppRouter();
+  MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Design Patterns in Flutter',
-      home: Scaffold(
-        backgroundColor: Colors.blueGrey[200],
-        body: const SafeArea(
-          child: SingletonExample(),
-        ),
-      ),
+      routeInformationParser: _appRouter.defaultRouteParser(),
+      routerDelegate: _appRouter.delegate(),
     );
   }
 }
