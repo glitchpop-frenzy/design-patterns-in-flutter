@@ -24,13 +24,18 @@ class _$AppRouter extends RootStackRouter {
     SingletonExampleRoute.name: (routeData) {
       return AdaptivePage<dynamic>(
           routeData: routeData, child: const SingletonExample());
+    },
+    AwesomeAdapterRoute.name: (routeData) {
+      return AdaptivePage<dynamic>(
+          routeData: routeData, child: const AwesomeAdapter());
     }
   };
 
   @override
   List<RouteConfig> get routes => [
         RouteConfig(HomePageRoute.name, path: '/'),
-        RouteConfig(SingletonExampleRoute.name, path: '/singleton-example')
+        RouteConfig(SingletonExampleRoute.name, path: '/singleton-example'),
+        RouteConfig(AwesomeAdapterRoute.name, path: '/awesome-adapter')
       ];
 }
 
@@ -49,4 +54,13 @@ class SingletonExampleRoute extends PageRouteInfo<void> {
       : super(SingletonExampleRoute.name, path: '/singleton-example');
 
   static const String name = 'SingletonExampleRoute';
+}
+
+/// generated route for
+/// [AwesomeAdapter]
+class AwesomeAdapterRoute extends PageRouteInfo<void> {
+  const AwesomeAdapterRoute()
+      : super(AwesomeAdapterRoute.name, path: '/awesome-adapter');
+
+  static const String name = 'AwesomeAdapterRoute';
 }

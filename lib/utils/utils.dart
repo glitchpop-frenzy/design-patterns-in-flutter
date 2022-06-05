@@ -5,6 +5,11 @@ const Color primaryBgColor2 = Color(0xFF262A33);
 const Color accentButtonBgColor = Color(0xFF8A8F99);
 const Color accentColor2 = Color(0xFF515866);
 
+//
+const buttonSep = SizedBox(
+  height: 10,
+);
+
 class PillButton extends StatelessWidget {
   final Widget child;
   final Function() onButtonPress;

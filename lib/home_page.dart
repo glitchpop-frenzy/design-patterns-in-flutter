@@ -18,6 +18,7 @@ class HomePage extends StatelessWidget {
             color: primaryBgColor,
             child: ListView(
               children: [
+                buttonSep,
                 PillButton(
                   child: const Text(
                     'Singleton magic',
@@ -28,6 +29,18 @@ class HomePage extends StatelessWidget {
                   ),
                   onButtonPress: () async => await AutoRouter.of(context)
                       .push(const SingletonExampleRoute()),
+                ),
+                buttonSep,
+                PillButton(
+                  child: const Text(
+                    'Awesome ADAPTER : Structural',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                    ),
+                  ),
+                  onButtonPress: () async => await AutoRouter.of(context)
+                      .push(const AwesomeAdapterRoute()),
                 ),
               ],
             ),
