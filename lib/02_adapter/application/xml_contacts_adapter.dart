@@ -16,7 +16,7 @@ class XmlContactsAdapter implements IContactsAdapter {
     final xmlDoc = XmlDocument.parse(contactXml);
     List<Contact> _xmlContactList = [];
     for (final xmlElement in xmlDoc.findElements('contact')) {
-      final fullName = xmlElement.findElements('fullname').single.text;
+      final fullName = xmlElement.findElements('fullName').single.text;
       final email = xmlElement.findElements('email').single.text;
       final favourite = xmlElement.findElements('favourite').single.text;
       _xmlContactList.add(

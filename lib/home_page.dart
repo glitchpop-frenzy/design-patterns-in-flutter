@@ -19,7 +19,8 @@ class HomePage extends StatelessWidget {
             child: ListView(
               children: [
                 buttonSep,
-                PillButton(
+                pillButton(
+                  context: context,
                   child: const Text(
                     'Singleton magic',
                     style: TextStyle(
@@ -31,7 +32,8 @@ class HomePage extends StatelessWidget {
                       .push(const SingletonExampleRoute()),
                 ),
                 buttonSep,
-                PillButton(
+                pillButton(
+                  context: context,
                   child: const Text(
                     'Awesome ADAPTER : Structural',
                     style: TextStyle(

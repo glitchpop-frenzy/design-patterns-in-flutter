@@ -10,35 +10,26 @@ const buttonSep = SizedBox(
   height: 10,
 );
 
-class PillButton extends StatelessWidget {
-  final Widget child;
-  final Function() onButtonPress;
-
-  const PillButton({
-    Key? key,
-    required this.child,
-    required this.onButtonPress,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ButtonStyle(
-        padding: MaterialStateProperty.all(
-          const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-        ),
-        backgroundColor: MaterialStateProperty.all(accentButtonBgColor),
-        shape: MaterialStateProperty.all(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-          ),
-        ),
-        fixedSize: MaterialStateProperty.all(
-          Size(MediaQuery.of(context).size.width, 65),
+Widget pillButton(
+    {required Widget child,
+    required Function() onButtonPress,
+    required BuildContext context}) {
+  return ElevatedButton(
+    style: ButtonStyle(
+      padding: MaterialStateProperty.all(
+        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+      ),
+      backgroundColor: MaterialStateProperty.all(accentButtonBgColor),
+      shape: MaterialStateProperty.all(
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
         ),
       ),
-      child: child,
-      onPressed: onButtonPress,
-    );
-  }
+      fixedSize: MaterialStateProperty.all(
+        Size(MediaQuery.of(context).size.width, 65),
+      ),
+    ),
+    child: child,
+    onPressed: onButtonPress,
+  );
 }

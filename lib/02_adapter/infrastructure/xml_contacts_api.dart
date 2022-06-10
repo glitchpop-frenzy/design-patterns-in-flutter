@@ -3,12 +3,12 @@ class XmlContactsApi {
     <?xml version="1.0"?>
     <contacts>
       <contact>
-        <fullname>marshal</fullname>
+        <fullName>marshal</fullName>
         <email>marshal@beercules.com</email>
         <favourite>true</favourite>
       </contact>
       <contact>
-        <fullname>lily</fullname>
+        <fullName>lily</fullName>
         <email>lilypad@thelook.com</email>
         <favourite>false</favourite>
       </contact>

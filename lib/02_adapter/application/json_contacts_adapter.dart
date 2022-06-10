@@ -4,7 +4,7 @@ import 'package:design_patterns_in_flutter/02_adapter/domain/i_contacts_adapter.
 import 'package:design_patterns_in_flutter/02_adapter/infrastructure/json_contacts_api.dart';
 import 'package:design_patterns_in_flutter/02_adapter/models/contact_model.dart';
 
-class JsonContactsAdaper implements IContactsAdapter {
+class JsonContactsAdapter implements IContactsAdapter {
   final JsonContactsApi _api = JsonContactsApi();
   @override
   List<Contact> getContacts() {
@@ -14,6 +14,7 @@ class JsonContactsAdaper implements IContactsAdapter {
   }
 
   List<Contact> _parseContactsJson(String contactJson) {
+    // final jsonEncoded = json.encode(contactJson);
     final contactsMap = json.decode(contactJson) as Map<String, dynamic>;
     final contactJsonList = contactsMap["contacts"] as List;
     List<Contact> contactList = contactJsonList
