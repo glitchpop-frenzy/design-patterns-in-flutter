@@ -28,6 +28,10 @@ class _$AppRouter extends RootStackRouter {
     AwesomeAdapterRoute.name: (routeData) {
       return AdaptivePage<dynamic>(
           routeData: routeData, child: const AwesomeAdapter());
+    },
+    MendingMediatorRoute.name: (routeData) {
+      return AdaptivePage<dynamic>(
+          routeData: routeData, child: const MendingMediator());
     }
   };
 
@@ -35,7 +39,8 @@ class _$AppRouter extends RootStackRouter {
   List<RouteConfig> get routes => [
         RouteConfig(HomePageRoute.name, path: '/'),
         RouteConfig(SingletonExampleRoute.name, path: '/singleton-example'),
-        RouteConfig(AwesomeAdapterRoute.name, path: '/awesome-adapter')
+        RouteConfig(AwesomeAdapterRoute.name, path: '/awesome-adapter'),
+        RouteConfig(MendingMediatorRoute.name, path: '/mending-mediator')
       ];
 }
 
@@ -63,4 +68,13 @@ class AwesomeAdapterRoute extends PageRouteInfo<void> {
       : super(AwesomeAdapterRoute.name, path: '/awesome-adapter');
 
   static const String name = 'AwesomeAdapterRoute';
+}
+
+/// generated route for
+/// [MendingMediator]
+class MendingMediatorRoute extends PageRouteInfo<void> {
+  const MendingMediatorRoute()
+      : super(MendingMediatorRoute.name, path: '/mending-mediator');
+
+  static const String name = 'MendingMediatorRoute';
 }

@@ -8,7 +8,7 @@ class AwesomeAdapter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: primaryBgColor2,
+      backgroundColor: accentColor2,
       appBar: AppBar(
         backgroundColor: accentButtonBgColor,
         title: const Text(

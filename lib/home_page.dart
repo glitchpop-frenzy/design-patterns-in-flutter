@@ -42,6 +42,18 @@ class HomePage extends StatelessWidget {
                   onButtonPress: () async => await AutoRouter.of(context)
                       .push(const AwesomeAdapterRoute()),
                 ),
+                buttonSep,
+                PillButton(
+                  child: const Text(
+                    'Mending MEDIATOR : Structural',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                    ),
+                  ),
+                  onButtonPress: () async => await AutoRouter.of(context)
+                      .push(const MendingMediatorRoute()),
+                ),
               ],
             ),
           )),

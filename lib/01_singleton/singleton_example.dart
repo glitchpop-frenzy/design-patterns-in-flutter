@@ -41,7 +41,7 @@ class _SingletonExampleState extends State<SingletonExample> {
     return Scaffold(
       backgroundColor: primaryBgColor2,
       appBar: AppBar(
-          backgroundColor: accentButtonBgColor,
+          backgroundColor: accentColor2,
           title: const Text(
             'Singleton Magic',
             style: TextStyle(color: Colors.white),
