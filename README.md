@@ -6,6 +6,7 @@ A new Flutter project.
 
 Design Patters:
 - Singletons: maintaining a single instance for the whole lifecycle of an application and provide a global point to access it.
+- Mediator: Mediator is a behavioral design-pattern used for one-to-many relationships 
 
 A few resources to get you started if this is your first Flutter project:
 
