@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 
 const Color primaryBgColor = Color(0xFF1B1D21);
 const Color primaryBgColor2 = Color(0xFF262A33);
+const Color primaryBgColor3 = Color(0xFF023047);
 const Color accentButtonBgColor = Color(0xFF8A8F99);
 const Color accentColor2 = Color(0xFF515866);
+const Color accentColor3 = Color(0xFFfaedcd);
 
 //
 const buttonSep = SizedBox(

@@ -54,6 +54,18 @@ class HomePage extends StatelessWidget {
                   onButtonPress: () async => await AutoRouter.of(context)
                       .push(const MendingMediatorRoute()),
                 ),
+                buttonSep,
+                PillButton(
+                  child: const Text(
+                    'OMG Observer : Behavioral',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                    ),
+                  ),
+                  onButtonPress: () async => await AutoRouter.of(context)
+                      .push(const ObserverExampleRoute()),
+                ),
               ],
             ),
           )),

@@ -32,6 +32,10 @@ class _$AppRouter extends RootStackRouter {
     MendingMediatorRoute.name: (routeData) {
       return AdaptivePage<dynamic>(
           routeData: routeData, child: const MendingMediator());
+    },
+    ObserverExampleRoute.name: (routeData) {
+      return AdaptivePage<dynamic>(
+          routeData: routeData, child: const ObserverExample());
     }
   };
 
@@ -40,7 +44,8 @@ class _$AppRouter extends RootStackRouter {
         RouteConfig(HomePageRoute.name, path: '/'),
         RouteConfig(SingletonExampleRoute.name, path: '/singleton-example'),
         RouteConfig(AwesomeAdapterRoute.name, path: '/awesome-adapter'),
-        RouteConfig(MendingMediatorRoute.name, path: '/mending-mediator')
+        RouteConfig(MendingMediatorRoute.name, path: '/mending-mediator'),
+        RouteConfig(ObserverExampleRoute.name, path: '/observer-example')
       ];
 }
 
@@ -77,4 +82,13 @@ class MendingMediatorRoute extends PageRouteInfo<void> {
       : super(MendingMediatorRoute.name, path: '/mending-mediator');
 
   static const String name = 'MendingMediatorRoute';
+}
+
+/// generated route for
+/// [ObserverExample]
+class ObserverExampleRoute extends PageRouteInfo<void> {
+  const ObserverExampleRoute()
+      : super(ObserverExampleRoute.name, path: '/observer-example');
+
+  static const String name = 'ObserverExampleRoute';
 }
