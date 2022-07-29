@@ -51,7 +51,7 @@ class _MendingMediatorState extends State<MendingMediator> {
 
   void _sendToDevs() {
     setState(() {
-      _admin.sendTo<Developer>('Sending to QA');
+      _admin.sendTo<Developer>('Sending to Devs');
     });
   }
 
